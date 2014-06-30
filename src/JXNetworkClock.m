@@ -6,6 +6,7 @@
   ╚══════════════════════════════════════════════════════════════════════════════════════════════════╝*/
 
 #import <netinet/in.h>
+#import <arpa/inet.h>
 #import "JXNetworkClock.h"
 
 #import "JXSNTPMacros.h"
@@ -180,8 +181,6 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"assoc-good" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"assoc-fail" object:nil];
 }
-
-#import <arpa/inet.h>
 
 /*┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
   ┃ ... obtain IP address, "xx.xx.xx.xx", from the sockaddr structure ...                            ┃
