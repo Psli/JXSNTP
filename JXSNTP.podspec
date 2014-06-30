@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   # over the selected files.
   # (See http://rake.rubyforge.org/classes/Rake/FileList.html.)
   #
-  s.source_files = 'src/*.{h,m}', 'lib/*.{h,m}'
+  s.source_files = 'src/*.{h,m}'
 
   # A list of file patterns which select the header files that should be
   # made available to the application. If the pattern is a directory then the
@@ -118,7 +118,6 @@ Pod::Spec.new do |s|
   # If this Pod uses ARC, specify it like so.
   #
   # s.requires_arc = true
-  s.requires_arc = true
   # If you need to specify any other build settings, add them to the
   # xcconfig hash.
   #
@@ -127,4 +126,6 @@ Pod::Spec.new do |s|
   # Finally, specify any Pods that this Pod depends on.
   #
   # s.dependency 'JSONKit', '~> 1.4'
+  s.dependency = 'CocoaAsyncSocket', '~> 7.4'
+  
 end
